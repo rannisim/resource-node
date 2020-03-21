@@ -8,12 +8,12 @@ This was built using Python, Flask and Invoke.
 This project requires the following:
 1. docker
 2. docker-compose
-3. Python 3.7
+3. Python 3.6
 
 To start the project locally run the following
 1. Create a virtual python env
 ```bash
-$ virtualenv -p python3.7 venv
+$ virtualenv -p python3.6 venv
 $ source venv/bin/activate
 
 ```
