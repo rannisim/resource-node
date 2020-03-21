@@ -1,0 +1,14 @@
+version: '2'
+services:
+  resource_node_1:
+    image: resource-node
+    ports:
+      - "8080:8080"
+    environment:
+      - PEER_RESOURCE_NODE_HOST=http://resource_node_2:8080
+  resource_node_2:
+    image: resource-node
+    ports:
+      - "9080:8080"
+    environment:
+      - PEER_RESOURCE_NODE_HOST=http://resource_node_1:8080
