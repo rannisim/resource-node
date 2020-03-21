@@ -37,7 +37,7 @@ def test_component(ctx):
     ctx.run("py.test tests/component")
 
 
-@task(pre=[clean, test_unit, docker_build, docker_compose_up, integration_test, component_test])
+@task(pre=[clean, test_unit, docker_build, docker_compose_up, test_integration, test_component])
 def test(ctx):
     """Runs all tests and prerequisites"""
     pass
